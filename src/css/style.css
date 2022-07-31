@@ -1,0 +1,168 @@
+/*reset configs*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+/**/
+
+body {
+    background-image: url(../img/fundo-site.png);/*maneira de colocar img.*/
+    background-repeat: no-repeat;/*isso diz para o background não repetir o fundo*/
+    background-size: cover;/*isso diz para o background ocupar todo o body*/
+    min-height: 100vh;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;/*isso alinha horizontalmente os itens*/
+    align-items: center;/*isso alinha verticalmente os itens*/
+    gap: 0.5rem;/*melhor utilização do que o margin quando colocamos o flex*/
+    padding-top: 2em;/*padding serve para espaçar elementos internamente, já o margin serve para elementos externos*/
+} 
+
+.cabecalho .titulo {
+    font-family: 'Outfit', sans-serif;
+    color: #f1ecff;
+}
+
+.cabecalho .pokebola {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.pokemon-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+    margin: 3em 0;
+}
+
+.cartao-pokemons {
+    width: 310px;
+    height: 525px;
+    position: relative;
+}
+
+.btn-seta{
+    background-color: #fff;
+    width: 70px;
+    height: 70px;
+    border-radius: 3em;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.btn-seta.btn-voltar {
+    transform: rotateY(180deg);/*deg é degress ou seja graus*/
+}
+
+.btn-seta:hover {
+    background-color: #9370DB;
+}
+
+.cartao {
+    opacity: 0;
+    background-color: burlywood;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.cartao.selecionado {
+    opacity: 1;
+    z-index: 1;
+}
+
+.fundo-1 {
+    background: url(../img/fundo-card-1.jpg) no-repeat;
+}
+
+.fundo-2 {
+    background: url(../img/fundo-card-2.jpg) no-repeat;
+}
+
+.fundo-3 {
+    background: url(../img/fundo-card-3.jpg) no-repeat;
+}
+
+.cartao-pokemons .info {
+    background-color: rgba(179, 177, 185, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-top-left-radius: 10px;/*isso específica em qual ponta o arredondado da borda vai ficar*/
+}
+
+.cartao .info .nome {
+    color: #fff;
+    font-size: 22px;
+}
+
+.cartao .info .vida {
+    background-color: #333;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 3em;
+}
+
+.cartao .container-img {
+    text-align: center;
+}
+
+.cartao .container-img .img-pokemon {
+    max-width:100%;
+    max-height: 280px;
+    padding: 20px;
+}
+
+.cartao .descricao {
+    background: rgba( 255, 255, 255, 0.8);
+    border-bottom-left-radius: 10px;
+}
+
+.cartao .descricao .titulo {
+    background-color: #333;
+    color: #fff;
+    font-size: 15px;
+    padding: 12px;
+}
+
+.cartao .descricao .txt {
+    font-size: 14px;
+    padding: 11px;
+    text-align: justify;
+    max-height: 122px;
+}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+h3, p {
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+span {
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Secular One', sans-serif;
+}
